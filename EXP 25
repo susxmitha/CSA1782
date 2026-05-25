@@ -14,11 +14,4 @@ action(
     state(at_window, on_floor, at_window, HB)
 ).
 
-solve([]) :-
-    initial_state(S),
-    final_state(S).
-
-solve([Action|Rest]) :-
-    initial_state(S0),
-    action(S0, Action, S1),
-    solve(Rest).
+solve([walk_to_window, grasp]).
