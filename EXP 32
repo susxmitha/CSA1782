@@ -1,0 +1,10 @@
+match(X, X).
+
+first([H|_], H).
+
+rest([_|T], T).
+
+member(X, [X|_]).
+
+member(X, [_|T]) :-
+    member(X, T).
